@@ -1,0 +1,59 @@
+name: DIORAMA isolated Android store captures
+on:
+  push:
+    branches: [diorama-store-capture-2026-11-13]
+    paths: ['diorama-capture/**', '.github/workflows/diorama-store-capture.yml']
+permissions:
+  contents: read
+jobs:
+  capture:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.14.3'
+      - uses: android-actions/setup-android@v4
+        with:
+          packages: 'platform-tools'
+      - run: sdkmanager 'platforms;android-36' 'build-tools;36.0.0'
+      - run: python -m pip install Pillow
+      - run: python diorama-capture/scripts/ci-capture-bootstrap.py
+      - run: gradle -p capture-build/android :app:assembleDebug :app:assembleDebugAndroidTest --no-daemon
+      - name: Enable emulator acceleration
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - name: Run actual Android app tests and capture screens
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 36
+          target: google_apis
+          arch: x86_64
+          profile: pixel_2
+          disable-animations: true
+          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          script: |
+            adb shell wm size 1080x1920
+            adb shell wm density 320
+            adb install -r capture-build/android/app/build/outputs/apk/debug/app-debug.apk
+            adb install -r capture-build/android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk
+            adb shell am instrument -w -r com.questrequestvr.diorama.debug.test/androidx.test.runner.AndroidJUnitRunner | tee instrumentation-result.txt
+            grep -q 'OK (3 tests)' instrumentation-result.txt
+            adb pull /sdcard/Android/data/com.questrequestvr.diorama.debug/files/store-screens store-screens
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: diorama-android-capture-evidence
+          path: |
+            instrumentation-result.txt
+            store-screens/

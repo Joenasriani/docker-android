@@ -1,0 +1,99 @@
+DIORAMA Android native dependency notices
+
+Resolved release dependencies and their declared POM licenses. Original game/assets retain their independent notices. Full Apache 2.0 text is supplied in Apache-2.0.txt. Capacitor MIT is supplied separately.
+
+androidx.activity:activity:1.11.0
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.annotation:annotation-experimental:1.4.1
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.annotation:annotation-jvm:1.8.1
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.appcompat:appcompat-resources:1.7.1
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.appcompat:appcompat:1.7.1
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.arch.core:core-common:2.2.0
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.arch.core:core-runtime:2.2.0
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.collection:collection-jvm:1.4.2
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.concurrent:concurrent-futures:1.1.0
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.coordinatorlayout:coordinatorlayout:1.3.0
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.core:core-ktx:1.17.0
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.core:core-splashscreen:1.2.0
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.core:core-viewtree:1.0.0
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.core:core:1.17.0
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.cursoradapter:cursoradapter:1.0.0
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.customview:customview:1.0.0
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.drawerlayout:drawerlayout:1.0.0
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.emoji2:emoji2-views-helper:1.3.0
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.emoji2:emoji2:1.3.0
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.fragment:fragment:1.8.9
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.interpolator:interpolator:1.0.0
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.lifecycle:lifecycle-common:2.6.2
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.lifecycle:lifecycle-livedata-core:2.6.2
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.lifecycle:lifecycle-livedata:2.6.2
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.lifecycle:lifecycle-process:2.6.2
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.lifecycle:lifecycle-runtime:2.6.2
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.lifecycle:lifecycle-viewmodel:2.6.2
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.loader:loader:1.0.0
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.profileinstaller:profileinstaller:1.4.0
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.resourceinspection:resourceinspection-annotation:1.0.1
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.savedstate:savedstate:1.2.1
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.startup:startup-runtime:1.1.1
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.tracing:tracing:1.2.0
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.vectordrawable:vectordrawable-animated:1.1.0
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.vectordrawable:vectordrawable:1.1.0
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.versionedparcelable:versionedparcelable:1.1.1
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.viewpager:viewpager:1.0.0
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+androidx.webkit:webkit:1.14.0
+  The Apache Software License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+com.google.guava:listenablefuture:1.0
+  Apache License, Version 2.0 | https://www.apache.org/licenses/LICENSE-2.0.txt
+  Inherited from guava-parent:26.0-android POM.
+org.apache.cordova:framework:14.0.1
+  Apache License, Version 2.0 | https://www.apache.org/licenses/LICENSE-2.0.txt
+org.jetbrains.kotlin:kotlin-stdlib:2.0.21
+  The Apache License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1
+  The Apache Software License, Version 2.0 | https://www.apache.org/licenses/LICENSE-2.0.txt
+org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.8.1
+  The Apache Software License, Version 2.0 | https://www.apache.org/licenses/LICENSE-2.0.txt
+org.jetbrains:annotations:23.0.0
+  The Apache Software License, Version 2.0 | https://www.apache.org/licenses/LICENSE-2.0.txt
+org.jspecify:jspecify:1.0.0
+  The Apache License, Version 2.0 | http://www.apache.org/licenses/LICENSE-2.0.txt
+
+Additional notices found in resolved dependency archives:

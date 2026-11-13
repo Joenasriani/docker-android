@@ -1,0 +1,16 @@
+DIORAMA Android Privacy Policy
+Prepared 12 November 2026
+
+DIORAMA is published by Joe Nasr. Contact: questrequestvr@gmail.com.
+
+DIORAMA plays locally on your Android device. The app does not collect or transmit personal data, analytics, advertising identifiers, location, contacts, microphone recordings or camera images. It has no account system, advertisements, analytics SDK or in-app billing SDK.
+
+The game stores your progress, completion records, best move counts and preferences locally using Android WebView storage. These records are not sent to the developer. The Android package disables application backup. Browser saves from the web edition do not automatically transfer to the Android app. Clearing the app's storage or uninstalling it deletes its local records. The game's reset control clears progress separately from replay.
+
+The Android edition contains no sequel-backing link, payment page or payment processing. It does not send gameplay data to external websites.
+
+If you email support, your email provider delivers your email address and anything you include. We use support correspondence to respond to your request. Please do not send sensitive information. You may request deletion of support correspondence by emailing the address above, subject to legal retention obligations.
+
+DIORAMA does not knowingly collect children's personal data through gameplay.
+
+Material changes to this policy will be reflected in an updated version. This policy is available from the Android Back menu under Privacy policy.

@@ -1,0 +1,28 @@
+{
+  "name": "diorama-android",
+  "version": "1.0.1",
+  "description": "Independent Android packaging of the frozen DIORAMA game",
+  "main": "index.js",
+  "scripts": {
+    "prepare:web": "node scripts/prepare-web.cjs",
+    "sync": "npm run prepare:web && cap sync android",
+    "verify": "node scripts/verify.cjs && node --test scripts/android-runtime.test.cjs",
+    "android:debug": "npm run sync && cd android && ./gradlew assembleDebug",
+    "android:bundle": "npm run sync && cd android && ./gradlew bundleRelease",
+    "android:checks": "npm run sync && cd android && ./gradlew :app:lintDebug :app:lintRelease :app:testDebugUnitTest :app:assembleDebugAndroidTest",
+    "android:device-test": "cd android && ./gradlew :app:connectedDebugAndroidTest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "SEE LICENSE IN upstream/runtime/THIRD_PARTY_LICENSES.md",
+  "type": "commonjs",
+  "dependencies": {
+    "@capacitor/android": "8.6.0",
+    "@capacitor/core": "8.6.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.6.0",
+    "java-parser": "3.0.1"
+  },
+  "private": true
+}

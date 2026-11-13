@@ -1,0 +1,9 @@
+{
+  "appId": "com.questrequestvr.diorama",
+  "appName": "DIORAMA",
+  "webDir": "www",
+  "backgroundColor": "#5b777d",
+  "server": { "hostname": "localhost", "androidScheme": "https" },
+  "android": { "allowMixedContent": false, "backgroundColor": "#5b777d" },
+  "plugins": { "SystemBars": { "insetsHandling": "native", "initialViewportFitValueHint": "contain" } }
+}
