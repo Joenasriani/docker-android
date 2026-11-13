@@ -23,6 +23,10 @@ for directory in ['scripts', 'docs', 'android-shell']:
 subprocess.run(['npm', 'ci'], cwd=project, check=True)
 subprocess.run(['npm', 'run', 'prepare:web'], cwd=project, check=True)
 subprocess.run(['npx', 'cap', 'add', 'android'], cwd=project, check=True)
+# Capacitor's generated example asserts the template package name. It is not a
+# DIORAMA test and must not accompany the three owned tests copied below.
+shutil.rmtree(project / 'android/app/src/androidTest', ignore_errors=True)
+shutil.rmtree(project / 'android/app/src/test', ignore_errors=True)
 shutil.copytree(payload / 'android', project / 'android', dirs_exist_ok=True)
 subprocess.run(['npx', 'cap', 'sync', 'android'], cwd=project, check=True)
 # Launcher-only derivatives from the exact accepted mascot. No game pixels or

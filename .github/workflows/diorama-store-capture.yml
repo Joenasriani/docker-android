@@ -47,9 +47,9 @@ jobs:
             adb shell wm density 320
             adb install -r capture-build/android/app/build/outputs/apk/debug/app-debug.apk
             adb install -r capture-build/android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk
-            adb shell am instrument -w -r com.questrequestvr.diorama.debug.test/androidx.test.runner.AndroidJUnitRunner | tee instrumentation-result.txt
+            adb shell am instrument -w -r -e package com.questrequestvr.diorama com.questrequestvr.diorama.debug.test/androidx.test.runner.AndroidJUnitRunner | tee instrumentation-result.txt
+            adb pull /sdcard/Android/data/com.questrequestvr.diorama.debug/files/store-screens store-screens || true
             grep -q 'OK (3 tests)' instrumentation-result.txt
-            adb pull /sdcard/Android/data/com.questrequestvr.diorama.debug/files/store-screens store-screens
       - uses: actions/upload-artifact@v4
         if: always()
         with:
