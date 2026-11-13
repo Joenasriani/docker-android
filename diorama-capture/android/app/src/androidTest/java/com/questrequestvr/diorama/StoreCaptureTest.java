@@ -66,12 +66,13 @@ public class StoreCaptureTest {
     }
     private void viewport(int width, int height, int density) throws Exception {
         shell("wm density " + density); SystemClock.sleep(1500); currentActivity();
-        int displayHeight = height;
+        int displayWidth = width, displayHeight = height;
         for (int attempt=0; attempt<5; attempt++) {
-            shell("wm size " + width + "x" + displayHeight);
+            shell("wm size " + displayWidth + "x" + displayHeight);
             SystemClock.sleep(1800); currentActivity();
             Rect actual = bounds();
             if (actual.width()==width && actual.height()==height) return;
+            displayWidth += width-actual.width();
             displayHeight += height-actual.height();
         }
         assertEquals(width,bounds().width()); assertEquals(height,bounds().height());

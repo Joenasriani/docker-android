@@ -41,7 +41,7 @@ jobs:
           arch: x86_64
           profile: pixel_2
           disable-animations: true
-          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          emulator-options: -no-window -gpu swiftshader -feature -Vulkan -noaudio -no-boot-anim -camera-back none
           script: |
             adb shell wm size 1080x1920
             adb shell wm density 320
@@ -49,6 +49,8 @@ jobs:
             adb install -r capture-build/android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk
             timeout 480s adb shell am instrument -w -r -e package com.questrequestvr.diorama com.questrequestvr.diorama.debug.test/androidx.test.runner.AndroidJUnitRunner | tee instrumentation-result.txt
             adb pull /sdcard/Android/data/com.questrequestvr.diorama.debug/files/store-screens store-screens || true
+            adb logcat -d > android-logcat.txt
+            adb shell dumpsys activity lastanr > android-last-anr.txt
             grep -q 'OK (3 tests)' instrumentation-result.txt
       - uses: actions/upload-artifact@v4
         if: always()
@@ -56,4 +58,6 @@ jobs:
           name: diorama-android-capture-evidence
           path: |
             instrumentation-result.txt
+            android-logcat.txt
+            android-last-anr.txt
             store-screens/
